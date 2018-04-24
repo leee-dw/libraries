@@ -1,5 +1,6 @@
 body {
-  margin: 10%; }
+  margin: 10%;
+}
 
 #slider {
   position: relative;
@@ -7,45 +8,76 @@ body {
   height: 250px;
   overflow: hidden;
   margin: 0 auto;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); }
-  #slider ul {
-    position: relative;
-    list-style: none;
-    height: 100%;
-    width: 9999%;
-    padding: 0;
-    margin: 0;
-    transition: all 750ms ease;
-    left: 0; }
-    #slider ul li {
-      position: relative;
-      height: 100%;
-      width: 727px;
-      float: left; }
-      #slider ul li:nth-child(1) {
-        background: url(../assets/lalaland1.jpg);
-        background-repeat: no-repeat; }
-      #slider ul li:nth-child(2) {
-        background: url(../assets/lalaland2.jpg);
-        background-repeat: no-repeat; }
-      #slider ul li:nth-child(3) {
-        background: url(../assets/lalaland3.jpg);
-        background-repeat: no-repeat; }
-      #slider ul li:nth-child(4) {
-        background: url(../assets/lalaland4.jpg);
-        background-repeat: no-repeat; }
-      #slider ul li:nth-child(5) {
-        background: url(../assets/lalaland5.jpg);
-        background-repeat: no-repeat; }
-      #slider ul li:nth-child(6) {
-        background: url(../assets/lalaland6.jpg);
-        background-repeat: no-repeat; }
-      #slider ul li:nth-child(7) {
-        background: url(../assets/lalaland7.jpg);
-        background-repeat: no-repeat; }
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
 
-#prev, #next {
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  left: 0;
+}
+
+#slider ul li {
+  position: absolute;
+  transition: all 500ms ease-in;
+  height: 100%;
+  width: 727px;
+  display: block;
+  opacity: 0;
+}
+
+#slider ul li:nth-child(1) {
+  background: url(../assets/lalaland1.jpg);
+  background-repeat: no-repeat;
+}
+
+#slider ul li:nth-child(2) {
+  background: url(../assets/lalaland2.jpg);
+  background-repeat: no-repeat;
+}
+
+#slider ul li:nth-child(3) {
+  background: url(../assets/lalaland3.jpg);
+  background-repeat: no-repeat;
+}
+
+#slider ul li:nth-child(4) {
+  background: url(../assets/lalaland4.jpg);
+  background-repeat: no-repeat;
+}
+
+#slider ul li:nth-child(5) {
+  background: url(../assets/lalaland5.jpg);
+  background-repeat: no-repeat;
+}
+
+#slider ul li:nth-child(6) {
+  background: url(../assets/lalaland6.jpg);
+  background-repeat: no-repeat;
+}
+
+#slider ul li:nth-child(7) {
+  background: url(../assets/lalaland7.jpg);
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+#prev,
+#next {
   width: 50px;
+  height: 50px;
   line-height: 50px;
   border-radius: 50%;
   font-size: 2rem;
@@ -56,14 +88,59 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: all 150ms ease; }
-  #prev:hover, #next:hover {
-    background-color: rgba(0, 0, 0, 0.5); }
+  transition: all 150ms ease;
+  vertical-align: 20px;
+}
+
+#prev::before,
+#next::before {
+  content: "";
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  margin: auto;
+  position: absolute;
+  display: inline;
+  top: 35%;
+  left: 25%;
+  transform: translate(-50%, -50px);
+  transform: rotate(-45deg);
+}
+
+#prev::after,
+#next::after {
+  content: "";
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  margin: auto;
+  position: absolute;
+  display: inline;
+  top: 58%;
+  left: 25%;
+  transform: translate(-50%, -50px);
+  transform: rotate(45deg);
+}
+
+#next::before {
+  transform: rotate(45deg);
+  left: 30%;
+}
+
+#next::after {
+  transform: rotate(-45deg);
+  left: 30%;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 #prev {
-  left: 10px; }
+  left: 10px;
+}
 
 #next {
-  right: 10px; }
-
-/*# sourceMappingURL=style.css.map */
+  right: 10px;
+}
