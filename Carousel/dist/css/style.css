@@ -23,25 +23,25 @@ body {
       width: 727px;
       float: left; }
       #slider ul li:nth-child(1) {
-        background-image: url(../../Images/lalaland1.jpg);
+        background: url(../assets/lalaland1.jpg);
         background-repeat: no-repeat; }
       #slider ul li:nth-child(2) {
-        background-image: url(../../Images/lalaland2.jpg);
+        background: url(../assets/lalaland2.jpg);
         background-repeat: no-repeat; }
       #slider ul li:nth-child(3) {
-        background-image: url(../../Images/lalaland3.jpg);
+        background: url(../assets/lalaland3.jpg);
         background-repeat: no-repeat; }
       #slider ul li:nth-child(4) {
-        background-image: url(../../Images/lalaland4.jpg);
+        background: url(../assets/lalaland4.jpg);
         background-repeat: no-repeat; }
       #slider ul li:nth-child(5) {
-        background-image: url(../../Images/lalaland5.jpg);
+        background: url(../assets/lalaland5.jpg);
         background-repeat: no-repeat; }
       #slider ul li:nth-child(6) {
-        background-image: url(../../Images/lalaland6.jpg);
+        background: url(../assets/lalaland6.jpg);
         background-repeat: no-repeat; }
       #slider ul li:nth-child(7) {
-        background-image: url(../../Images/lalaland7.jpg);
+        background: url(../assets/lalaland7.jpg);
         background-repeat: no-repeat; }
 
 #prev, #next {
