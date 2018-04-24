@@ -1,15 +1,10 @@
-let slideList = document.querySelector('#sliderWrap');
-let slides = slideList.querySelectorAll('li');
-let items = slides.length;
-
-let prev = document.getElementById('prev');
-let next = document.getElementById('next');
-
-let count = 0;
-
-
-
-function clickPrev() {
+const initSlider = () => {
+  let slideList = document.querySelector('#sliderWrap');
+  let slides = slideList.querySelectorAll('li');
+  let items = slides.length;
+  let prev = document.getElementById('prev');
+  let next = document.getElementById('next');
+  let count = 0;
   slides[0].style.opacity = '1';
   prev.addEventListener('click', (event) => {
     if (count < items && count > 0) {
@@ -23,11 +18,6 @@ function clickPrev() {
       count--;
     }
   })
-}
-
-
-function clickNext() {
-  slides[0].style.opacity = '1';
   next.addEventListener('click', (event) => {
     if (count < items - 1) {
       count++;
@@ -42,5 +32,5 @@ function clickNext() {
 }
 
 
-clickPrev();
-clickNext();
+
+initSlider();
