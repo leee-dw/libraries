@@ -5,7 +5,9 @@ const initSlider = () => {
   let prev = document.getElementById('prev');
   let next = document.getElementById('next');
   let count = 0;
+
   slides[0].style.opacity = '1';
+
   prev.addEventListener('click', (event) => {
     if (count < items && count > 0) {
       count--;
@@ -18,6 +20,7 @@ const initSlider = () => {
       count--;
     }
   })
+  
   next.addEventListener('click', (event) => {
     if (count < items - 1) {
       count++;
